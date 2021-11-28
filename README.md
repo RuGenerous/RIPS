@@ -6,7 +6,7 @@
  <p align="center">
 <align="center">
  
-![Validate](https://github.com/rugenerous/RIPS/workflows/Validate/badge.svg?branch=master) [![Discord](https://img.shields.io/discord/734804446353031319.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discord.gg/N5dgz3Nbpz/) [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/rugenerousfinance) [![Twitter Follow](https://img.shields.io/twitter/follow/iearnfinance.svg?label=iearnfinance&style=social)](https://twitter.com/rugenerous)
+![Validate](https://github.com/rugenerous/RIPS/workflows/Validate/badge.svg?branch=master) [![Discord](https://img.shields.io/discord/734804446353031319.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discord.gg/N5dgz3Nbpz/) [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/rugenerousfinance) (https://twitter.com/rugenerous)
 
 - [RIPs](#rips)
   * [Contributing](#contributing)
