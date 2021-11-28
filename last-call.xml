@@ -1,0 +1,35 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rugenerous DAO RIPs - Last Call Review</title>
+    <description>All RIPs which are in the two-week "last call" status, please help review these and provide your feedback!</description>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}/last-call.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    {% assign RIPs = site.pages | sort: 'RIP' %}
+    {% for RIP in RIPs %}
+      {% if RIP.status == "Last Call" %}
+      {% capture description %}
+        <p><strong>RIP #{{ RIP.RIP }} - {{RIP.title }}</strong> is in Last Call status. It is authored by {{ RIP.author }} and was originally created {{ RIP.created }}. It is in the {{ RIP.category }} category of type {{ RIP.type }}. Please review and note any changes that should block acceptance.</p>
+        {% if RIP.discussions-to %}
+          <p>The author has requested that discussions happen at the following URL: {{ RIP.discussions-to }}</p>
+        {% else %}
+          <p>Please visit the [rugenerous/RIPs issues to comment](https://github.com/rugenerous/RIPs/issues/{{RIP.RIP}}).</p>
+        {% endif %}
+        <hr />
+        {{ RIP.content }}        
+      {% endcapture %}
+      <item>
+        <title>{{ RIP.title | xml_escape }}</title>
+        <description>{{ description | xml_escape }}</description>
+        <pubDate>{{ RIP.created | date_to_rfc822 }}</pubDate>
+        <link>{{ site.url }}/{{ RIP.url }}</link>
+        <guid isPermaLink="true">{{ site.url }}/{{ RIP.url }}</guid>
+      </item>
+      {% endif %}
+    {% endfor %}
+  </channel>
+</rss>

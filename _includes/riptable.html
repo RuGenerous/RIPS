@@ -1,0 +1,32 @@
+<style type="text/css">
+  .riptable .title {
+    width: 67%;
+  }
+
+  .riptable .author {
+    width: 33%;
+  }
+</style>
+{% for status in site.data.statuses %} {% assign rips =
+include.rips|where:"status",status|sort:"rip" %} {% assign count = rips|size %}
+{% if count > 0 %}
+<h2>{{status}}</h2>
+<table class="riptable">
+  <thead>
+    <tr>
+      <th class="ripnum">Number</th>
+      <th class="title">Title</th>
+      <th class="author">Author</th>
+    </tr>
+  </thead>
+  {% for page in rips %}
+  <tr>
+    <td class="ripnum">
+      <a href="{{page.url|relative_url}}">{{page.rip|xml_escape}}</a>
+    </td>
+    <td class="title">{{page.title|xml_escape}}</td>
+    <td class="author">{% include authorlist.html authors=page.author %}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %} {% endfor %}

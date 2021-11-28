@@ -1,0 +1,7 @@
+---
+layout: page
+title: All RIPs
+---
+
+{% assign rips=site.pages|where_exp:"page","page.rip > -1" %} {% include
+riptable.html rips=rips %}
